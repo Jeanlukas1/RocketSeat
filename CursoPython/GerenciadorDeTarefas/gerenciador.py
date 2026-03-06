@@ -10,6 +10,7 @@ def adicionar_tarefa(titulo:str, sobre:str):
     }
     
     lista_de_tarefas.append(dicionario_de_tarefas)
+    return
 
 def visualizar_tarefa():
     """Função que lista as tarefas adicionada pelo usuário em sua lista"""
@@ -21,7 +22,8 @@ def visualizar_tarefa():
               Titulo: {tarefa["titulo"]}
               Assunto: {tarefa["sobre"]}
               """)
-
+    return
+    
 def atualizar_tarefa(titulo:str):
     for tarefa in lista_de_tarefas:
         if titulo in tarefa["titulo"]:
@@ -42,7 +44,9 @@ def atualizar_tarefa(titulo:str):
                 
             except ValueError:
                 print("Insira um número inteiro!")
-            
+    print("Tarefa não encontrada!")
+    return
+          
 def completar_tarefa(titulo:str):
     for tarefa in lista_de_tarefas:
         if titulo == tarefa["titulo"]:
@@ -54,7 +58,7 @@ def completar_tarefa(titulo:str):
                 return
             
     print("Tarefa não encontrada!")
-    
+    return
 
 def deletar_tarefa(titulo:str):
     for tarefa in lista_de_tarefas:
@@ -64,6 +68,7 @@ def deletar_tarefa(titulo:str):
             return
     
     print("Tarefa não encontrada!")
+    return
 
 
 def main():
