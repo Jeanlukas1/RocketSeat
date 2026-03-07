@@ -46,13 +46,14 @@ def completar_tarefa(indice_tarefa:int):
 def deletar_tarefa_concluída():
     for tarefa in tarefas:
         if tarefa["concluido"]:
-            print(tarefa["titulo"])
+            tarefas.remove(tarefa)
+            print("Tarefa removida com sucesso!")
+    print("\nNão existe nenhuma tarefa concluída!")
     return
 
 def main():
     
     while True:
-        
         
         print("\nBem Vindo ao nosso Sistema de gerenciamento de Tarefas!")
         print("Escolha uma das opções a seguir:")
